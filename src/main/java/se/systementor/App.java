@@ -15,6 +15,29 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
+        ArrayList<OldEmployee> employees  = new  ArrayList<>();
+        employees.add(new OldEmployee("12345", "Stefan", 10000));
+        employees.add(new OldEmployee("55511", "Oliver", 4000));
+        employees.add(new OldEmployee("555781", "Josefine", 5000));
+
+        for ( OldEmployee employee : employees){
+            int belopp = employee.calculateSalary();
+            employee.sendToBankFile(belopp);
+        }
+        System.out.println("Lönekörnngen klar");
+        
+
+
+
+
+
+
+
+
+
+
+
+
         var oliver = new HourlyEmployee("12345", "0805280000", 120);
         oliver.setHoursWorked(20);
         var stefan = new MonthlyEmployee("11122", "7208030000", 10000);
